@@ -7,7 +7,7 @@
           <nav class="navbar">
             <div class="logo col-12">
               <div class="col-2">
-                <img src="/oscarlogo.png" alt="Logo" class="nav-logo">
+                <img src="/solo-logo-trasp.png" alt="Logo" class="nav-logo">
               </div>
               <div class="col-4">
                 <h1>Oscar Spiaggia</h1>
@@ -23,6 +23,7 @@
           </nav>
           <div class="container">
             <div class="col-12">
+              <hr>
               <div class="collapse text-center m-2" id="navbarToggleExternalContent">
                 <h4 class="text-white">Menù bar</h4>
                 <div class="collapsed-navbar text-white p-2">
@@ -59,9 +60,15 @@ export default defineComponent({});
   color: white;
 }
 
+hr {
+  border: 1px solid white;
+  border-radius: 20px;
+  box-shadow: rgb(29, 44, 59) 0px 10px 20px -10px;
+}
+
 .full-page {
   height: 100vh;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.185), rgba(0, 0, 0, 0.582)), url(/oscar.jpg);
+  background: linear-gradient(to bottom, rgba(160, 159, 159, 0.144), rgba(124, 123, 123, 0.13)), url(/oscar.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   position: relative; /* Posiziona l'overlay in modo relativo rispetto a questo elemento */
@@ -79,6 +86,11 @@ h1 {
   margin: 0;
   padding: 8px;
   font-size: 22px;
+  text-shadow: 2px 2px #2f59a6;
+}
+
+h4{
+  text-shadow: 2px 2px #2f59a6;
 }
 
 .logo {
@@ -91,6 +103,7 @@ h1 {
 
 .nav-logo {
   width: 55px;
+  filter: grayscale(0%);
 }
 
 i {
@@ -144,12 +157,14 @@ i {
   border: 1px solid #ffffff75;
   border-radius: 15px;
   padding: 7px;
-
   box-shadow: rgb(29, 44, 59) 0px 10px 20px -10px;
   background-color: rgba(255, 255, 255, 0.253); /* Sfondo semi-trasparente */
   font-size: larger;
-  background: rgba(255, 255, 255, 0.2); /* Make sure this color has an opacity of less than 1*/
-  backdrop-filter: blur(8px); /* This be the blur*/
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  font-size: 22px;
+  color: #2f59a6;
+  text-shadow: 1px 1px white;
 }
 
 </style>
