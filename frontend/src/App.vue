@@ -7,10 +7,13 @@
           <nav class="navbar">
             <div class="logo col-12">
               <div class="col-2">
-                <img src="/solo-logo-trasp.png" alt="Logo" class="nav-logo">
+                <router-link to="/" class="rlink"><img src="/solo-logo-trasp.png" alt="Logo" class="nav-logo"></router-link>
+                <!-- <img src="/solo-logo-trasp.png" alt="Logo" class="nav-logo"> -->
               </div>
               <div class="col-4">
-                <h1>Oscar Spiaggia</h1>
+                <h1>
+                  <router-link to="/" class="rlink">Oscar Spiaggia</router-link>
+                </h1>
               </div>
               <div class="col-3"></div>
               <div class="col-2">
@@ -29,10 +32,10 @@
                 <div class="collapsed-navbar text-white p-2">
                   <div class="mario">
                     <div class="links">
-                      <Routerlink to="/cocktail">Cocktail</Routerlink>
-                      <Routerlink to="/wine">Cantina</Routerlink>
-                      <Routerlink to="/coffe">Caffè</Routerlink>
-                      <Routerlink to="/liquors">Liquori</Routerlink>
+                      <router-link to="/cocktail" class="routerlink">Cocktail</router-link>
+                      <router-link to="/wine" class="routerlink">Cantina</router-link>
+                      <router-link to="/coffe" class="routerlink">Caffè</router-link>
+                      <router-link to="/liquors" class="routerlink">Liquori</router-link>
                     </div>
                   </div>
                 </div>
@@ -41,12 +44,14 @@
           </div>
         </div>
       </div>
+      <RouterView />
     </main>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import { RouterLink } from 'vue-router';
 
 export default defineComponent({});
 </script>
@@ -153,7 +158,7 @@ i {
   margin: 0;
 }
 
-.links>Routerlink {
+.links>.routerlink {
   border: 1px solid #ffffff75;
   border-radius: 15px;
   padding: 7px;
@@ -165,6 +170,18 @@ i {
   font-size: 22px;
   color: #2f59a6;
   text-shadow: 1px 1px white;
+  z-index: 100;
+}
+
+.rlink {
+  text-decoration: none;
+  color: white;
+  text-shadow: 2px 2px #2f59a6;
+}
+
+.routerlink:hover, .rlink:focus {
+  text-decoration: none;
+  transform: scale(1.06);
 }
 
 </style>

@@ -4,7 +4,7 @@ export default defineComponent({});
 </script>
 
 <template>
-
+    <p>ciao</p>
 </template>
 
 <style scoped>
