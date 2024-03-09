@@ -22,7 +22,7 @@ export default defineComponent({});
             <div class="info">
                 <p><i class="bi bi-geo-alt"></i> Via VIII Traversa, Milano Marittima</p>
                 <p><i class="bi bi-telephone"></i> 0544 992598</p>
-                <p><i class="bi bi-envelope"></i> info@oscarspiaggia.com</p>
+                <!-- <p><i class="bi bi-envelope"></i> info@oscarspiaggia.com</p> -->
                 <hr>
                 <p><i class="bi bi-star"></i> Valutazione · <span class="val">4,7</span></p>
                 <p><i class="bi bi-wallet2"></i> Fascia di prezzo · <span class="eur">€€</span></p>
@@ -33,7 +33,7 @@ export default defineComponent({});
 
 <style scoped>
 * {
-    color: white
+    color: white;
 }
 
 .page {
