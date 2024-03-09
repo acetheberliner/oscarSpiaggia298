@@ -1,6 +1,6 @@
 <template>
+  <div class="overlay"></div> <!-- Aggiungi un overlay semi-trasparente -->
   <div class="full-page">
-    <div class="overlay"></div> <!-- Aggiungi un overlay semi-trasparente -->
     <main>
       <div class="container-fluid">
         <div class="row nav">
@@ -77,6 +77,11 @@ export default defineComponent({
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
   color: white;
+  scroll-behavior: smooth;
+}
+
+.container {
+  z-index: 3;
 }
 
 hr {
@@ -86,11 +91,15 @@ hr {
 }
 
 .full-page {
+  position: relative; /* Posiziona l'overlay in modo relativo rispetto a questo elemento */
   height: 100vh;
+  overflow-y: auto;
   background: linear-gradient(to bottom, rgba(160, 159, 159, 0.144), rgba(124, 123, 123, 0.13)), url(/oscar.jpg);
   background-size: cover;
-  background-repeat: no-repeat;
-  position: relative; /* Posiziona l'overlay in modo relativo rispetto a questo elemento */
+  background-repeat: repeat;
+  background-attachment: fixed;
+  z-index: 1;
+  filter: opacity(95%);
 }
 
 .navbar {
@@ -99,6 +108,7 @@ hr {
   min-width: 100%;
   justify-content: center;
   align-items: center;
+  z-index: 3;
 }
 
 h1 {
@@ -151,12 +161,12 @@ i {
 }
 
 .overlay {
-  position:fixed; /* Posiziona l'overlay in modo assoluto */
+  position:relative; /* Posiziona l'overlay in modo assoluto */
   left: 3%;
   top: 2%;
   width: 94%;
   height: 96%;
-  z-index: 0; /* Assicura che l'overlay sia sopra il contenuto */
+  z-index: 2; /* Assicura che l'overlay sia sopra il contenuto */
   background-color: rgba(255, 255, 255, 0.356); /* Sfondo semi-trasparente */
   border-radius: 20px;
 }
@@ -184,7 +194,7 @@ i {
   font-size: 22px;
   color: #2f59a6;
   text-shadow: 1px 1px white;
-  z-index: 100;
+  z-index: 3;
   transition: all 0.1s ease-in-out;
 }
 
