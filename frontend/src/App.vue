@@ -53,7 +53,21 @@
 import { defineComponent } from "vue";
 import { RouterLink } from 'vue-router';
 
-export default defineComponent({});
+export default defineComponent({
+  mounted() {
+    const routerLinks = document.querySelectorAll('.routerlink');
+
+    routerLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        const navbarToggle = document.getElementById('navbarToggleExternalContent');
+
+        if (navbarToggle?.classList.contains('show')) {
+          navbarToggle?.classList.remove('show');
+        }
+      });
+    });
+  }
+});
 </script>
 
 <style scoped>
@@ -164,13 +178,14 @@ i {
   padding: 7px;
   box-shadow: rgb(29, 44, 59) 0px 10px 20px -10px;
   background-color: rgba(255, 255, 255, 0.253); /* Sfondo semi-trasparente */
-  font-size: larger;
+  font-size: bolder;
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(8px);
   font-size: 22px;
   color: #2f59a6;
   text-shadow: 1px 1px white;
   z-index: 100;
+  transition: all 0.1s ease-in-out;
 }
 
 .rlink {
