@@ -20,7 +20,7 @@ export default defineComponent({
     methods: {
         async getDrink() {
             const res = await axios.get("/api/drink");
-            this.datiDrink = res.data;      
+            this.datiDrink = res.data;
         },
     },
     mounted() {
@@ -32,9 +32,7 @@ export default defineComponent({
 <template>
     <div class="page">
         <h3>Cocktail</h3>
-        <div class="bubble">
-            <PostDrink v-for="drink in datiDrink" :key="drink.iddrink"></PostDrink>
-        </div>
+        <PostDrink v-for="drink in datiDrink" :key="drink.iddrink" :drink="drink" />
     </div>
 </template>
 

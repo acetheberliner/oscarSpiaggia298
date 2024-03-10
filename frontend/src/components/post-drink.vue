@@ -16,9 +16,21 @@ export default defineComponent({
 </script>
 
 <template>
-    <h3>{{ drink.categoria }}</h3>
+    <div class="drink-bubble">
+        <h2>{{ drink.nome }}</h2>
+    </div>
 </template>
 
 <style scoped>
+.drink-bubble {
+    border: 1px solid red;
+    border-radius: 20px;
+    padding: 8px;
+    background-color: white;
+}
+
+h2 {
+    color: black;
+}
 </style>
 

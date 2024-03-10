@@ -1,5 +1,5 @@
 <template>
-  <div class="overlay"></div> <!-- Aggiungi un overlay semi-trasparente -->
+  <!-- <div class="overlay"></div> -->
   <div class="full-page">
     <main>
       <div class="container-fluid">

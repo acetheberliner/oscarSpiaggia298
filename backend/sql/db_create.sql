@@ -1,5 +1,7 @@
 DROP DATABASE IF EXISTS oscarspiaggia;
+
 CREATE DATABASE  oscarspiaggia;
+
 USE oscarspiaggia;
 
 CREATE TABLE `drink` (
