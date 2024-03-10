@@ -12,8 +12,7 @@ CREATE TABLE `drink` (
     `metodo` varchar(50) NOT NULL,
     `categoria`  varchar(50) NOT NULL,
     `sapore` varchar(2500) NOT NULL,
-    `prezzo` int(11) NOT NULL,
-    `img` varchar(1000) NOT NULL,
+    `prezzo` int(11) NOT NULL
     PRIMARY KEY (`iddrink`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 

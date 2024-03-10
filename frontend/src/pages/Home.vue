@@ -77,7 +77,7 @@ hr.sep {
     padding: 8px;
     width: 80%;
     border: 1px solid rgba(68, 67, 67, 0.075);
-    background-color: rgba(46, 45, 45, 0.493); /* Sfondo semi-trasparente */
+    background-color: rgba(46, 45, 45, 0.712); /* Sfondo semi-trasparente */
     box-shadow: rgb(92, 97, 97) 10px 10px 20px -10px;
     text-align: center;
     margin-top: 10px;
@@ -102,7 +102,7 @@ hr {
     padding: 8px;
     width: 80%;
     border: 1px solid rgba(68, 67, 67, 0.075);
-    background-color: rgba(46, 45, 45, 0.493); /* Sfondo semi-trasparente */
+    background-color: rgba(46, 45, 45, 0.712); /* Sfondo semi-trasparente */
     box-shadow: rgb(92, 97, 97) 10px 10px 20px -10px;
     margin-bottom: 25px;
 }

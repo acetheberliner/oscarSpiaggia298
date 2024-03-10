@@ -7,7 +7,7 @@
           <nav class="navbar">
             <div class="logo col-12">
               <div class="col-2">
-                <router-link to="/" class="rlink"><img src="/solo-logo-trasp.png" alt="Logo" class="nav-logo"></router-link>
+                <router-link to="/" class="rlink"><img src="/vect-white.svg" alt="Logo" class="nav-logo"></router-link>
                 <!-- <img src="/solo-logo-trasp.png" alt="Logo" class="nav-logo"> -->
               </div>
               <div class="col-4">
@@ -81,6 +81,9 @@ html {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
   color: white;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
 
 .container {
@@ -195,7 +198,7 @@ i {
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(8px);
   font-size: 22px;
-  color: #2f59a6;
+  color: #015aff;
   text-shadow: 1px 1px white;
   z-index: 3;
   transition: all 0.1s ease-in-out;
