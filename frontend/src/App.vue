@@ -32,10 +32,10 @@
                 <div class="collapsed-navbar text-white p-2">
                   <div class="mario">
                     <div class="links">
-                      <router-link to="/cocktail" class="routerlink">Cocktail</router-link>
+                      <router-link to="/rist" class="routerlink">Ristorante</router-link>
+                      <router-link to="/coffe" class="routerlink">Caffetteria</router-link>
                       <router-link to="/wine" class="routerlink">Cantina</router-link>
-                      <router-link to="/coffe" class="routerlink">Caffè</router-link>
-                      <router-link to="/liquors" class="routerlink">Liquori</router-link>
+                      <router-link to="/cocktail" class="routerlink">Cocktail</router-link>
                     </div>
                   </div>
                 </div>
@@ -73,11 +73,14 @@ export default defineComponent({
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
   color: white;
-  scroll-behavior: smooth;
 }
 
 .container {
@@ -185,7 +188,7 @@ i {
 .links>.routerlink {
   border: 1px solid #ffffff75;
   border-radius: 15px;
-  padding: 7px;
+  padding: 8px;
   box-shadow: rgb(29, 44, 59) 0px 10px 20px -10px;
   background-color: rgba(255, 255, 255, 0.253); /* Sfondo semi-trasparente */
   font-size: bolder;

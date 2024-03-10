@@ -8,7 +8,7 @@ export const getConnection = async () => {
       host: "localhost",
       user: "root",
       password: "",
-      database: "oscarSpiaggia298",
+      database: "oscarspiaggia",
     });
   }
   return connection;

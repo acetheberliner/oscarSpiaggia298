@@ -1,8 +1,12 @@
 import express from "express";
 import history from "connect-history-api-fallback";
 
+import drinkRouter from "./routes/drink-router";
+
 const app = express();
 app.use(history());
+
+app.use(drinkRouter);
 
 app.use((_, res) => {
     res.setHeader("Content-Type", "text/plain");

@@ -7,7 +7,7 @@ import Home from "./pages/Home.vue";
 import Cocktail from "./pages/Cocktail.vue";
 import Cantina from "./pages/Cantina.vue";
 import Caffe from "./pages/Caffe.vue";
-import Liquori from "./pages/Liquori.vue";
+import Ristorante from "./pages/Ristorante.vue";
 import NotFound from "./pages/Notfound.vue";
 
 const router: Router = createRouter({
@@ -17,7 +17,7 @@ const router: Router = createRouter({
         {path: "/cocktail", component: Cocktail},
         {path: "/wine", component: Cantina},
         {path: "/coffee", component: Caffe},
-        {path: "/liquors", component: Liquori},
+        {path: "/rist", component: Ristorante},
         { path: "/:pathMatch(.*)*", component: NotFound },
     ],
 });

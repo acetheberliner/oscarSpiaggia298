@@ -4,7 +4,9 @@ export default defineComponent({});
 </script>
 
 <template>
-
+    <p>
+        Ristorante
+    </p>
 </template>
 
 <style scoped>
