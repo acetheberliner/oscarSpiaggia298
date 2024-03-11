@@ -54,6 +54,20 @@ import { defineComponent } from "vue";
 import { RouterLink } from 'vue-router';
 
 export default defineComponent({
+  methods: {
+    isDesktop(): boolean {
+      return window.matchMedia("(min-width: 769px)").matches;
+    },
+
+    checkDevice(): void {
+      if (this.isDesktop()) {
+        // Se è un desktop, reindirizza ad un'altra pagina
+        window.location.href = "pagina_non_disponibile_su_desktop.html";
+        // Oppure mostra un messaggio di avviso
+        // document.body.innerHTML = "<h1>Questa pagina non è disponibile su dispositivi desktop.</h1>";
+      }
+    }
+  },
   mounted() {
     const routerLinks = document.querySelectorAll('.routerlink');
 
@@ -66,19 +80,23 @@ export default defineComponent({
         }
       });
     });
+
+    // Controlla il dispositivo quando la pagina è completamente caricata
+    this.checkDevice();
   }
 });
 </script>
 
 <style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"); */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
 
 html {
   scroll-behavior: smooth;
 }
 
 * {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Comfortaa", sans-serif;
   font-weight: bold;
   color: white;
   -webkit-user-select: none; /* Safari */
@@ -88,6 +106,7 @@ html {
 
 .container {
   z-index: 3;
+  margin-bottom: 25px;
 }
 
 hr {
@@ -185,21 +204,20 @@ i {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
-  margin: 0;
 }
 
 .links>.routerlink {
-  border: 1px solid #ffffff75;
+  border: 1px solid #ffffff;
   border-radius: 15px;
-  padding: 8px;
+  padding: 6px;
   box-shadow: rgb(29, 44, 59) 0px 10px 20px -10px;
   background-color: rgba(255, 255, 255, 0.253); /* Sfondo semi-trasparente */
   font-size: bolder;
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(8px);
   font-size: 22px;
-  color: #015aff;
-  text-shadow: 1px 1px white;
+  color: #fdfeff;
+  text-shadow: 1px 1px transparent;
   z-index: 3;
   transition: all 0.1s ease-in-out;
 }
@@ -207,7 +225,6 @@ i {
 .rlink {
   text-decoration: none;
   color: white;
-  text-shadow: 2px 2px #2f59a6;
 }
 
 .routerlink:hover, .rlink:focus {
