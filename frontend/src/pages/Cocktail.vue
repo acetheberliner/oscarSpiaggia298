@@ -112,7 +112,7 @@ img.tumb {
 
 h2 {
     font-weight: bold;
-    text-shadow: 2px 2px #2f59a6;
+    text-shadow: #ffffff 1px 0 10px;
     margin: 0;
 }
 
@@ -150,4 +150,7 @@ footer {
     position: sticky;
 }
 
+div.collapse>p {
+    text-shadow: #ffffff 1px 0 10px;
+}
 </style>

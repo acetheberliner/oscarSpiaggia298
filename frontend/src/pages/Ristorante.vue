@@ -35,11 +35,12 @@ export default defineComponent({
             <h2>Ristorante</h2>
         </div>
         <div class="image">
-            <img src="/red.jpg" alt="">
-            <img class="tumb" src="/tumblr.jpg" alt="">
+            <img src="/pesce.jpg" alt="">
+            <img class="tumb" src="/pasta.jpg" alt="">
+            <img class="fing" src="/insalata.jpg" alt="">
         </div>
         <div class="meal-list">
-            <PostFood v-for="food in datiFood" :key="food.idfood" :drink="food" />
+            <PostFood v-for="food in datiFood" :key="food.idfood" :food="food" />
         </div>
     </div>
 </template>
@@ -52,12 +53,12 @@ p.attention {
 }
 
 img {
-    width: 200px;
+    width: 280px;
     border: 1px solid transparent;
     border-radius: 20px;
     position: absolute;
     z-index: 99;
-    transform: translateX(-75px) translateY(80px);
+    transform: translateX(-75px) translateY(180px);
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
@@ -66,6 +67,14 @@ img.tumb {
     position: relative;
     z-index: 100;
     transform: translateX(80px);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+img.fing {
+    width: 180px;
+    z-index: 101;
+    transform: translateX(-75px) translateY(-40px);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 .image {
@@ -73,7 +82,7 @@ img.tumb {
     display: flex;
     align-items: center;
     position: relative;
-    margin-bottom: 120px;
+    margin-bottom: 160px;
 }
 
 .meal-list {
@@ -106,7 +115,7 @@ img.tumb {
 
 h2 {
     font-weight: bold;
-    text-shadow: 2px 2px #2f59a6;
+    text-shadow: #ffffff 1px 0 10px;
     margin: 0;
 }
 

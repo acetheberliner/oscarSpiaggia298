@@ -18,8 +18,8 @@ export default defineComponent({
 <template>
     <button class="navbar-toggler text-white"  type="button" data-toggle="collapse" :data-target="'#toggle-' + food.idfood" aria-controls="toggle" aria-expanded="false" aria-label="Toggle navigation">
         <div class="present">
-            <h4 class="nome"><span class="drink-icon"><i class="bi bi-cup-straw"></i></span> {{ food.nome }}</h4>
-            <h6 class="prezzo"><span class="precise">*</span> {{ food.prezzo }}.00€</h6>
+            <h4 class="nome"><span class="drink-icon"><img class="icon" src="/fork.png" alt="" /></span> {{ food.nome }}</h4>
+            <h6 class="prezzo">{{ food.prezzo }}.00€</h6>
         </div>
         <div class="" :id="'toggle-' + food.idfood">
             <hr>
@@ -97,8 +97,9 @@ button.navbar-toggler:visited {
 .nome {
     font-weight: bold;
     color: #2c57a3;
-    text-shadow: 1.5px 1.5px #4fa1ca;
+    text-shadow: 1.5px 1.5px #4fa1ca;    
     font-weight: bolder;
+    font-size: 22px;
 }
 
 .drink-icon{
@@ -106,9 +107,9 @@ button.navbar-toggler:visited {
     text-shadow: 1.5px 1.5px transparent;
 }
 
-.precise {
-    color:#2c57a3;
-    font-weight: bold;
+img.icon {
+    width: 30px;
 }
+
 </style>
 
