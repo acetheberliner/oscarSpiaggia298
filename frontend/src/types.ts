@@ -7,5 +7,12 @@ export interface Drink {
     categoria: string
     sapore: string
     prezzo: number
-    img: string
+}
+
+export interface Food {
+    idfood: number
+    nome: string
+    ingredienti: string
+    categoria: string
+    prezzo: number
 }

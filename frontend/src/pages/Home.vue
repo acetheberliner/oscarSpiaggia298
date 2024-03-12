@@ -62,7 +62,7 @@ img {
 
 h2{
     color: #ffffff;
-    text-shadow: 1.5px 3px #2f59a6;
+    text-shadow: #2f59a6 1px 0 8px;
     font-weight: bold;
 }
 

@@ -8,7 +8,6 @@
             <div class="logo col-12">
               <div class="col-2">
                 <router-link to="/" class="rlink"><img src="/vect-white.svg" alt="Logo" class="nav-logo"></router-link>
-                <!-- <img src="/solo-logo-trasp.png" alt="Logo" class="nav-logo"> -->
               </div>
               <div class="col-4">
                 <h1>
@@ -55,18 +54,6 @@ import { RouterLink } from 'vue-router';
 
 export default defineComponent({
   methods: {
-    isDesktop(): boolean {
-      return window.matchMedia("(min-width: 769px)").matches;
-    },
-
-    checkDevice(): void {
-      if (this.isDesktop()) {
-        // Se è un desktop, reindirizza ad un'altra pagina
-        window.location.href = "pagina_non_disponibile_su_desktop.html";
-        // Oppure mostra un messaggio di avviso
-        // document.body.innerHTML = "<h1>Questa pagina non è disponibile su dispositivi desktop.</h1>";
-      }
-    }
   },
   mounted() {
     const routerLinks = document.querySelectorAll('.routerlink');
@@ -80,9 +67,6 @@ export default defineComponent({
         }
       });
     });
-
-    // Controlla il dispositivo quando la pagina è completamente caricata
-    this.checkDevice();
   }
 });
 </script>
@@ -119,7 +103,7 @@ hr {
   position: relative; /* Posiziona l'overlay in modo relativo rispetto a questo elemento */
   height: 100vh;
   overflow-y: auto;
-  background: linear-gradient(to bottom, rgba(160, 159, 159, 0.144), rgba(124, 123, 123, 0.13)), url(/oscar.jpg);
+  background: linear-gradient(to bottom, rgba(14, 14, 14, 0.233), rgba(22, 22, 22, 0.13)), url(/oscar.jpg);
   background-size: cover;
   background-repeat: repeat;
   background-attachment: fixed;
@@ -140,7 +124,7 @@ h1 {
   margin: 0;
   padding: 8px;
   font-size: 22px;
-  text-shadow: 2px 2px #2f59a6;
+  text-shadow: #ffffff 1px 0 10px;
 }
 
 h4{
@@ -217,7 +201,7 @@ i {
   backdrop-filter: blur(8px);
   font-size: 22px;
   color: #fdfeff;
-  text-shadow: 1px 1px transparent;
+  text-shadow: #ffffff 1px 0 6px;
   z-index: 3;
   transition: all 0.1s ease-in-out;
 }

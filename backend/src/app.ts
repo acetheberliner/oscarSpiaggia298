@@ -3,6 +3,7 @@ import history from "connect-history-api-fallback";
 import bodyParser from "body-parser";
 
 import drinkRouter from "./routes/drink-router";
+import foodRouter from "./routes/food-router";
 
 const app = express();
 
@@ -11,6 +12,7 @@ app.use(history());
 app.use(bodyParser.json());
 
 app.use(drinkRouter);
+app.use(foodRouter);
 
 app.use(history());
 app.use(express.static("dist-frontend"));
