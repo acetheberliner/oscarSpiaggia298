@@ -34,3 +34,11 @@ CREATE TABLE `food` (
     `prezzo` int(11) NOT NULL,
     PRIMARY KEY (`idfood`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+CREATE TABLE `bar` (
+    `idbar` varchar(11) NOT NULL,
+    `nome` varchar(60) NOT NULL,
+    `categoria`  varchar(50) NOT NULL,
+    `prezzo` int(11) NOT NULL,
+    PRIMARY KEY (`idbar`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
