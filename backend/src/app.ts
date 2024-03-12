@@ -4,6 +4,8 @@ import bodyParser from "body-parser";
 
 import drinkRouter from "./routes/drink-router";
 import foodRouter from "./routes/food-router";
+import barRouter from "./routes/bar-router";
+import wineRouter from "./routes/wine-router";
 
 const app = express();
 
@@ -13,6 +15,8 @@ app.use(bodyParser.json());
 
 app.use(drinkRouter);
 app.use(foodRouter);
+app.use(barRouter);
+app.use(wineRouter);
 
 app.use(history());
 app.use(express.static("dist-frontend"));
