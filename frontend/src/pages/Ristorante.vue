@@ -39,7 +39,7 @@ export default defineComponent({
             <img class="tumb" src="/pasta.jpg" alt="">
             <img class="fing" src="/insalata.jpg" alt="">
         </div>
-        <div class="meal-list">
+        <div class="meal-list page animate slide delay-1">
             <PostFood v-for="food in datiFood" :key="food.idfood" :food="food" />
         </div>
     </div>

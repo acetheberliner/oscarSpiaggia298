@@ -21,7 +21,7 @@ CREATE TABLE `wine` (
     `nome` varchar(50) NOT NULL,
     `colore` varchar(20) NOT NULL,
     `gusto` varchar(30) NOT NULL,
-    `grad` varchar(40) NOT NULL,
+    `grad` int(40) NOT NULL,
     `prezzo` int(11) NOT NULL,
     PRIMARY KEY (`idwine`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;

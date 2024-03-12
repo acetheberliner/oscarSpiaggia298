@@ -16,3 +16,19 @@ export interface Food {
     categoria: string
     prezzo: number
 }
+
+export interface Bar {
+    idbar: number
+    nome: string
+    categoria: string
+    prezzo: number   
+}
+
+export interface Wine {
+    idwine: number
+    nome: string
+    colore: string
+    gusto: string
+    grad: number
+    prezzo: number
+}

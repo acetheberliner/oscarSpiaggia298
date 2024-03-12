@@ -44,7 +44,7 @@ export default defineComponent({
         <div id="info" class="collapse">
             <p>* : in occasione di eventi speciali, i prezzi vengono calcolati differentemente. <br> Grazie per la comprensione.</p>
         </div>
-        <div class="drink-list">
+        <div class="drink-list page animate slide delay-1">
             <PostDrink v-for="drink in datiDrink" :key="drink.iddrink" :drink="drink" />
         </div>
     </div>

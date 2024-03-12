@@ -32,7 +32,7 @@
                   <div class="mario">
                     <div class="links">
                       <router-link to="/rist" class="routerlink">Ristorante</router-link>
-                      <router-link to="/coffe" class="routerlink">Caffetteria</router-link>
+                      <router-link to="/coffee" class="routerlink">Caffetteria</router-link>
                       <router-link to="/wine" class="routerlink">Cantina</router-link>
                       <router-link to="/cocktail" class="routerlink">Cocktail</router-link>
                     </div>
@@ -127,6 +127,10 @@ h1 {
   text-shadow: #ffffff 1px 0 10px;
 }
 
+h1>.rlink {
+  font-weight: 100;
+}
+
 h4{
   text-shadow: 2px 2px #2f59a6;
 }
@@ -203,6 +207,7 @@ i {
   color: #fdfeff;
   text-shadow: #ffffff 1px 0 6px;
   z-index: 3;
+  font-weight: 100;
   transition: all 0.1s ease-in-out;
 }
 
