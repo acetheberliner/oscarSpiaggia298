@@ -21,10 +21,7 @@ app.use((0, connect_history_api_fallback_1.default)());
 app.use(express_1.default.static("dist-frontend"));
 app.use((_, res) => {
     res.setHeader("Content-Type", "text/plain");
-    res.status(404).send("Qui non c'e niente-_-_-_ ");
+    res.status(404).send("suca suca suca");
 });
-app.get('/', (req, res) => {
-    res.send("Hello suca");
-})
-const port = 5000;
+const port = 3000;
 app.listen(port, () => console.log(`Listening on http://localhost:${port}`));
