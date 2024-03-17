@@ -1,1 +1,43 @@
-{}
+{
+    "name": "my-project",
+    "version": "1.0.0",
+    "description": "A sample npm project",
+    "main": "app.js",
+    "scripts": {
+      "start": "node app.js",
+      "build": "npm run build:esm && npm run build:cjs",
+      "build:esm": "tsc -p esm.tsconfig.json",
+      "build:cjs": "tsc -p cjs.tsconfig.json",
+      "serve": "vue-cli-service serve",
+      "lint": "eslint --ext .js,.vue src",
+      "test": "jest"
+    },
+    "keywords": [
+      "npm",
+      "example"
+    ],
+    "author": "Your Name",
+    "license": "MIT",
+    "devDependencies": {
+      "@types/jest": "^27.4.0",
+      "@types/node": "^20.11.1",
+      "@typescript-eslint/eslint-plugin": "^5.14.0",
+      "@typescript-eslint/parser": "^5.14.0",
+      "eslint": "^8.12.0",
+      "eslint-plugin-vue": "^8.2.0",
+      "jest": "^27.4.5",
+      "typescript": "^4.5.2",
+      "vue-cli-plugin-eslint": "^1.10.3",
+      "vue-cli-plugin-typescript": "^0.5.0",
+      "vue-jest": "^27.0.0-alpha.4",
+      "vue-tsc": "^0.0.43"
+    },
+    "dependencies": {
+      "axios": "^0.26.1",
+      "bootstrap": "^5.1.3",
+      "core-js": "^3.22.5",
+      "vue": "^3.2.31",
+      "vue-router": "^4.1.3",
+      "vuex": "^4.0.2"
+    }
+  }
