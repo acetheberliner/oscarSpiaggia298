@@ -1,0 +1,22 @@
+"use strict";
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.allWine = void 0;
+const db_1 = require("../utils/db");
+// tutti i drink
+function allWine(req, res) {
+    return __awaiter(this, void 0, void 0, function* () {
+        const connection = yield (0, db_1.getConnection)();
+        const [results] = yield connection.execute("SELECT idwine, nome, colore, gusto, grad, prezzo FROM wine", []);
+        res.json(results);
+    });
+}
+exports.allWine = allWine;
