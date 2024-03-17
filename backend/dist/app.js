@@ -21,7 +21,7 @@ app.use((0, connect_history_api_fallback_1.default)());
 app.use(express_1.default.static("dist-frontend"));
 app.use((_, res) => {
     res.setHeader("Content-Type", "text/plain");
-    res.status(404).send("suca suca suca");
+    res.status(404).send("Ops... Pagina non trovata");
 });
 const port = 3000;
 app.listen(port, () => console.log(`Listening on http://localhost:${port}`));

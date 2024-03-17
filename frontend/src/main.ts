@@ -1,6 +1,6 @@
 // import axios from "axios";
 import { createApp } from 'vue'
-import { createRouter, createWebHistory, Router } from "vue-router";
+import { createRouter, createWebHashHistory, Router } from "vue-router";
 import App from "./App.vue";
 
 import Home from "./pages/Home.vue";
@@ -11,7 +11,7 @@ import Ristorante from "./pages/Ristorante.vue";
 import NotFound from "./pages/Notfound.vue";
 
 const router: Router = createRouter({
-    history: createWebHistory(),
+    history: createWebHashHistory(),
     routes: [
         {path: "/", component: Home},
         {path: "/cocktail", component: Cocktail},
