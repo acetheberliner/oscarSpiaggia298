@@ -5,8 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc && vite build",
-    "preview": "vite preview"
+    "build": "vue-tsc && vite build babel src -d lib",
+    "preview": "vite preview",
+    "test": "jest"
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",
