@@ -4,7 +4,7 @@
     "description": "A sample npm project",
     "main": "app.js",
     "scripts": {
-      "start": "node app.js",
+      "start": "node ./backend/dist/app.js",
       "build": "npm run build:esm && npm run build:cjs",
       "build:esm": "tsc -p esm.tsconfig.json",
       "build:cjs": "tsc -p cjs.tsconfig.json",
